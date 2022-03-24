@@ -1,6 +1,7 @@
 {% load static %}
 {% load bootstrap5 %}
 {% block content %}
+{% bootstrap_messages %}
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -8,12 +9,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="{% static 'js/inserir.js' %}"></script>
     {% bootstrap_css %}
     {% bootstrap_javascript %}
     <title>Gerador de Currículos</title>
 </head>
+
 <body>
-   <p> Aqui ficará o forms com os dados</p> 
+    <div id="div-form">
+    <form action="" method="POST" accept-charset="utf-8" type="form">
+        {% csrf_token %}
+        <p id="form-fields">
+            {% bootstrap_form form %}
+        </p>
+        <button type="submit" value="Save" id="btn_next">Gerar PDF</button>
+    </form>
+
+    </div>  
 </body>
 </html>
 

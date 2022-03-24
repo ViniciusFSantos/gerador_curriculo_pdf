@@ -1,0 +1,36 @@
+{% load static %}
+{% load bootstrap5 %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="{% static 'js/exportar.js' %}"></script>
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <title>Gerador de Currículos</title>
+</head> 
+<body>
+    <p>{{candidato.pk}}</p>
+    <p>{{candidato.nome}}</p>
+    <p>{{candidato.idade}}</p>
+    <p>{{candidato.estado_civil}}</p>
+    <p>{{candidato.endereco}}</p>
+    <p>{{candidato.email}}</p>
+    <p>{{candidato.telefone}}</p>
+    <p>{{candidato.linkedin}}</p>
+    <p>{{candidato.objetivo}}</p>
+    <p>{{candidato.formacao_academica}}</p>
+    <p>{{candidato.idiomas}}</p>
+    <p>{{candidato.outras_qualificacoes}}</p>
+    <p>{{candidato.experiencia1}}</p>
+    <p>{{candidato.experiencia2}}</p>
+    <p>{{candidato.experiencia3}}</p>
+
+</body>
+</html>
+
+{% endblock %}
