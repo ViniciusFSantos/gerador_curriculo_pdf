@@ -1,11 +1,5 @@
-import os
-import uuid
-
-from django.conf import settings
 from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
-from django.template import Template
 from django.template.loader import get_template
-from django.contrib.staticfiles import finders
 from django.shortcuts import render
 from django.views.generic import TemplateView, View, ListView
 from django.views.generic.edit import FormView
