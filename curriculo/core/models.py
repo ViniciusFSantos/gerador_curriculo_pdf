@@ -1,3 +1,4 @@
+from logging import PlaceHolder
 from uuid import UUID
 import uuid
 
@@ -17,14 +18,17 @@ class Candidato(models.Model):
     estado_civil = models.CharField(max_length=14, choices=estado_civil_choices, blank=False, null=False, verbose_name='Estado Civil')
     endereco = models.CharField(max_length=100, help_text='Ex:  Bairro, Cidade - UF', verbose_name='Endereço')
     email = models.EmailField(max_length=100, verbose_name='E-mail')
-    telefone = models.CharField(max_length=11, blank=True, null=True, verbose_name='Telefone')
-    linkedin = models.URLField(max_length=150, verbose_name='LinkedIn')
-    objetivo = models.TextField(max_length=300)
+    telefone = models.CharField(max_length=15, help_text='Ex:  (24) 9983-6570', blank=True, null=True, verbose_name='Telefone ou Celular')
+    linkedin = models.URLField(max_length=150, help_text='Ex:  https://linkedin.com/ronaldocerqueira', verbose_name='LinkedIn')
+    objetivo = models.CharField(max_length=200)
     formacao_academica = models.TextField(max_length=400, verbose_name='Formação Acadêmica')
-    idiomas = models.CharField(max_length=100, verbose_name='Idioma')
-    outras_qualificacoes = models.TextField(max_length=800, verbose_name='Qualificações')
-    experiencia1 = models.TextField(max_length=800, verbose_name='Experiência Profissional 1')
-    experiencia2 = models.TextField(max_length=800, verbose_name='Experiência Profissional 2')
-    experiencia3 =  models.TextField(max_length=800, verbose_name='Experiência Profissional 3')
+    idiomas = models.CharField(blank='True', max_length=100, help_text='Ex:  Inglês Básico', verbose_name='Idioma')
+    outras_qualificacoes = models.TextField(max_length=800, verbose_name='Qualificações Profissionais')
+    empresa1 = models.CharField(blank='True', max_length=100, help_text='Ex:  Contabilidade União - 03/2018 a 02/2022', verbose_name='Nome da Empresa e tempo de permanência')
+    experiencia1 = models.TextField(blank='True', max_length=800, verbose_name='Atividades desempenhadas')
+    empresa2 = models.CharField(blank='True', max_length=100, help_text='Ex:  Laboratórios Lux - 01/2011 a 08/2016', verbose_name='Nome da Empresa e tempo de permanência')
+    experiencia2 = models.TextField(blank='True', max_length=800, verbose_name='Atividades desempenhadas')
+    empresa3 = models.CharField(blank='True', max_length=100, help_text='Ex:  Mecânica Teixeira - 05/2009 a 06/2010', verbose_name='Nome da Empresa e tempo de permanência')
+    experiencia3 =  models.TextField(blank='True', max_length=800, verbose_name='Atividades desempenhadas ')
     
     

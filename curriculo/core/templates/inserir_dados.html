@@ -20,8 +20,11 @@
     <form autocomplete="off" id="form-form"action="" method="POST" accept-charset="utf-8" type="form">
         {% csrf_token %}
         <p id="fields-form">
+
             {% bootstrap_form form %}
+        
         </p>
+        
         <button type="submit" class="btn btn-primary" value="Save" id="btn-pdf">Gerar Currículo</button>
     </form>
     </div>  

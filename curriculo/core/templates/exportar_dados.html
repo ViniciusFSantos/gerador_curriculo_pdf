@@ -8,29 +8,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="{% static 'js/exportar.js' %}"></script>
-    {% bootstrap_css %}
-    {% bootstrap_javascript %}
-    <title>Gerador de Currículos</title>
-</head> 
-<body>
-    <p>{{candidato.pk}}</p>
-    <p>{{candidato.nome}}</p>
-    <p>{{candidato.idade}}</p>
-    <p>{{candidato.estado_civil}}</p>
-    <p>{{candidato.endereco}}</p>
-    <p>{{candidato.email}}</p>
-    <p>{{candidato.telefone}}</p>
-    <p>{{candidato.linkedin}}</p>
-    <p>{{candidato.objetivo}}</p>
-    <p>{{candidato.formacao_academica}}</p>
-    <p>{{candidato.idiomas}}</p>
-    <p>{{candidato.outras_qualificacoes}}</p>
-    <p>{{candidato.experiencia1}}</p>
-    <p>{{candidato.experiencia2}}</p>
-    <p>{{candidato.experiencia3}}</p>
+</head>
+<style>
 
+body{
+    font-family:  Calibri, sans-serif !important;
+    font-size: 12pt;
+    color: black;
+}
+
+.p-dados-pessoais{
+    margin-top: -18px;
+    font-size: 11pt;
+}
+#nome{
+    font-size: 15pt !important;
+    font-weight: bold;
+}
+#objetivo{
+    font-weight: bold;
+}
+#info-acad{
+    margin-top: 35px ;
+}
+.descricao{
+    margin-top: 150px;
+    font-size: 11pt;
+}
+.titulos{
+    font-size: 11pt;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.titulos-prof{
+    font-size: 11pt;
+    font-weight: bold;
+}
+#titulo-exp-prof{
+    font-size: 11pt;
+    font-weight: bold;
+    text-decoration: underline !important;
+}
+</style>
+<body>
+    <div id="folha-a4">
+        
+        <div id="dados-pessoais">
+            <div id="nome">{{candidato.nome}}</div>
+            <div id="idade-civil-end" class="p-dados-pessoais">{{candidato.idade}} anos, {{candidato.estado_civil}}. Residente em {{candidato.endereco}}.</div>
+            <div id="tel-email" class="p-dados-pessoais">{{candidato.telefone}} | {{candidato.email}}</div>
+            <div id="linkedin" class="p-dados-pessoais">{{candidato.linkedin}}</div>
+            <div id="objetivo" class="p-dados-pessoais">OBJETIVO: {{candidato.objetivo}}</div>
+        </div>
+        <div id="info-acad">
+                <div id="formacao-titulo" class="titulos"> Formação Acadêmica</div>
+                <div id="formacao-desc" class="descricao"><ul>{{candidato.formacao_academica | linebreaks}}</ul></div>
+        </div>
+        <div id="info-idioma">
+            <div id="idioma-titulo" class="titulos"> Idiomas</div>
+            <div id="idioma-desc" class="descricao"><ul>{{candidato.idiomas | linebreaks}}</ul></div>
+        </div>
+        <div id="info-qualificacoes">
+            <div id="qualificacoes-titulo" class="titulos"> Qualificações</div>
+            <div id="qualificacoes-desc" class="descricao"><ul>{{candidato.outras_qualificacoes | linebreaks}}</ul></div>
+        </div>
+        <div id="exp-prof">
+            
+            <div id="titulo-exp-prof">Expreiência Profissional</div>
+            
+            <div id="info-exp1">
+                <div id="exp1-titulo" class="titulos-prof"> {{candidato.empresa1}}</div>
+                <div id="exp1-desc" class="descricao"><ul>{{candidato.experiencia1 | linebreaks}}</ul></div>
+            </div>
+            <div id="info-exp2">
+                <div id="exp2-titulo" class="titulos-prof">{{candidato.empresa2}}</div>
+                <div id="exp2-desc" class="descricao"><ul>{{candidato.experiencia2 | linebreaks}}</ul></div>
+            </div>
+            <div id="info-exp3">
+                <div id="exp2-titulo" class="titulos-prof">{{candidato.empresa3}}</div>
+                <div id="exp2-desc" class="descricao"><ul>{{candidato.experiencia3 | linebreaks}}</ul></div>
+            </div>
+            
+
+        </div>
+    </div>
 </body>
 </html>
-
 {% endblock %}
