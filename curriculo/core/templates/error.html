@@ -1,14 +1,34 @@
+{% load static %}
+{% load bootstrap5 %}
+{% block content %}
+{% bootstrap_messages %}
+
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=h, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/error.css' %}">
+    <title>Oops!</title>
 </head>
 <body>
-    <h1>ERROR PAGE NOT FOUND
-        Template em breve
-    </h1>
+    <div id="content-geral">
+        <div id="msg-error">
+            <h1 id="h1-error">
+                Oops! Algo deu errado :(
+            </h1>
+            <h2 id="h2-error">
+                Preencha os dados novamente!
+            </h2>
+        </div>
+        <div id="content-img">
+            <img src="{% static 'img/error.png' %}" alt="ERROR!">
+        </div>
+        <div>
+            <a href="{% url 'index' %}"><button id="voltar-btn">Voltar</button></a>
+        </div>
+    </div>  
 </body>
 </html>
+{% endblock %}

@@ -1,0 +1,47 @@
+body{
+    background-color: rgb(236, 236, 236);
+}
+img{
+    box-shadow: 10px 5px 25px rgba(0, 0, 0, 0.479);
+}
+#h1-error{
+    margin-top: 3%;
+}
+#h2-error{
+    margin-top: -1%;
+    margin-bottom: -2%;
+}
+#content-img{
+    text-align: center;
+    margin-top: 5%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#msg-error{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#voltar-btn{
+    width: 8%;
+    background-color: rgba(21, 76, 179, 0.89);
+    border-radius: 15px;
+    padding-top: 0.6%;
+    padding-bottom: 0.6%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    font-weight: bold;
+    border-color: rgba(19, 19, 19, 0.384);
+    box-shadow: 2px 3px 25px rgba(0, 0, 0, 0.349);
+    margin-left: 47%;
+    margin-top: 1.4%;
+}
+
+button:hover{
+    background-color: rgba(49, 91, 168, 0.89) !important;
+    font-weight: bolder !important;
+    
+    transition-duration: 0.4s !important;
+    cursor: pointer;
+
+}
