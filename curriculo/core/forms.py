@@ -1,4 +1,3 @@
-from tkinter import Widget
 import uuid
 from django import forms
 from .models import Candidato
