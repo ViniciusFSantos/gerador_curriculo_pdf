@@ -32,7 +32,6 @@ body{
     margin-top: 35px ;
 }
 .descricao{
-    margin-top: 150px;
     font-size: 11pt;
 }
 .titulos{
@@ -66,7 +65,7 @@ body{
         </div>
         <div id="info-idioma">
             <div id="idioma-titulo" class="titulos"> Idiomas</div>
-            <div id="idioma-desc" class="descricao"><ul>{{candidato.idiomas | linebreaks}}</ul></div>
+            <div id="idioma-desc" class="descricao"><ul class="">{{candidato.idiomas | linebreaks}}</ul></div>
         </div>
         <div id="info-qualificacoes">
             <div id="qualificacoes-titulo" class="titulos"> Qualificações</div>
@@ -74,17 +73,17 @@ body{
         </div>
         <div id="exp-prof">
             
-            <div id="titulo-exp-prof">Expreiência Profissional</div>
+            <div id="titulo-exp-prof">Experiência Profissional</div>
             
-            <div id="info-exp1">
+            <div id="info-exp1" class="exps-prof">
                 <div id="exp1-titulo" class="titulos-prof"> {{candidato.empresa1}}</div>
                 <div id="exp1-desc" class="descricao"><ul>{{candidato.experiencia1 | linebreaks}}</ul></div>
             </div>
-            <div id="info-exp2">
+            <div id="info-exp2" class="exps-prof">
                 <div id="exp2-titulo" class="titulos-prof">{{candidato.empresa2}}</div>
                 <div id="exp2-desc" class="descricao"><ul>{{candidato.experiencia2 | linebreaks}}</ul></div>
             </div>
-            <div id="info-exp3">
+            <div id="info-exp3" class="exps-prof">
                 <div id="exp2-titulo" class="titulos-prof">{{candidato.empresa3}}</div>
                 <div id="exp2-desc" class="descricao"><ul>{{candidato.experiencia3 | linebreaks}}</ul></div>
             </div>
