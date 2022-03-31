@@ -1,5 +1,9 @@
 input::placeholder{
-    color: white !important;
+    color: white !important ;
+}
+
+.special-placeholders::placeholder{
+    color:  rgba(0, 0, 0, 0.466) !important ;
 }
 
 .mb-3{
