@@ -22,7 +22,7 @@ class Candidato(models.Model):
     linkedin = models.URLField(max_length=150, help_text='Ex:  https://linkedin.com/ronaldocerqueira', verbose_name='LinkedIn')
     objetivo = models.CharField(max_length=200)
     formacao_academica = models.TextField(max_length=400, verbose_name='Formação Acadêmica')
-    idiomas = models.CharField(blank='True', max_length=100, help_text='Ex:  Inglês Básico', verbose_name='Idioma')
+    idiomas = models.CharField(blank='True', max_length=100, help_text='Ex:  Inglês Básico', verbose_name='Idiomas')
     outras_qualificacoes = models.TextField(max_length=800, verbose_name='Qualificações Profissionais')
     empresa1 = models.CharField(blank='True', max_length=100, help_text='Ex:  Contabilidade União - 03/2018 a 02/2022', verbose_name='Nome da Empresa e tempo de permanência')
     experiencia1 = models.TextField(blank='True', max_length=800, verbose_name='Atividades desempenhadas')
