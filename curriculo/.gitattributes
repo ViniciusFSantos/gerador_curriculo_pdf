@@ -1,2 +1,2 @@
 ./core/static/css/home/* linguist-vendored
-
+*.py linguist-language=Python
